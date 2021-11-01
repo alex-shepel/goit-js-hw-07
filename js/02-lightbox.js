@@ -26,3 +26,4 @@ renderGalleryMarkup(galleryItems);
 
 const lightbox = new SimpleLightbox(".gallery__link");
 lightbox.options.captionsData = "alt";
+lightbox.options.captionDelay = 250;
