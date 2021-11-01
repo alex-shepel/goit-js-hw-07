@@ -26,5 +26,3 @@ const renderGalleryMarkup = galleryItems => {
 renderGalleryMarkup(galleryItems);
 
 new SimpleLightbox(".gallery a");
-
-refs.gallery.addEventListener("click", onClickGallery);
