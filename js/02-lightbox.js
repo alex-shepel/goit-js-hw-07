@@ -24,4 +24,5 @@ const renderGalleryMarkup = galleryItems => {
 
 renderGalleryMarkup(galleryItems);
 
-new SimpleLightbox(".gallery a");
+const lightbox = new SimpleLightbox(".gallery__link");
+lightbox.options.captionsData = "alt";
