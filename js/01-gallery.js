@@ -23,4 +23,23 @@ const renderGalleryMarkup = galleryItems => {
 		.join("");
 };
 
+const onClickGallery = e => {
+	e.preventDefault();
+
+	const lightbox = basicLightbox.create(
+		`<img src="${e.target.dataset.source}">`
+	);
+	lightbox.show();
+
+	document.addEventListener(
+		"keydown",
+		e => {
+			if (e.key === "Escape") lightbox.close();
+		},
+		{ once: true }
+	);
+};
+
 renderGalleryMarkup(galleryItems);
+
+refs.gallery.addEventListener("click", onClickGallery);
